@@ -5,6 +5,7 @@ const port = 3000;
 
 app.get("/", (req, res) => {
   const today = new Date();
+  console.log(today);
   //Test code
   // weekend:
   // new Date("June 24, 2023 11:13:00");
@@ -21,7 +22,7 @@ app.get("/", (req, res) => {
     adv = "it's time to have some fun";
   }
 
-  res.render("solution.ejs", {
+  res.render("index.ejs", {
     dayType: type,
     advice: adv,
   });
